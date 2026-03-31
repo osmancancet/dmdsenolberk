@@ -130,6 +130,19 @@ export default function Home() {
             />
           </div>
 
+          {/* e-Devlet Doğrulama */}
+          <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-4 text-center">
+            <p className="text-sm text-green-800 mb-1">
+              <strong>e-Devlet Doğrulama:</strong> Kampanyamızı e-Devlet
+              üzerinden doğrulayabilirsiniz.
+            </p>
+            <p className="text-xs text-green-700">
+              e-Devlet &rarr; Yardım Toplama İzinleri Sorgulama &rarr;{" "}
+              <strong>Ad Soyad: Serpil Çıvgın</strong> &rarr; Faaliyet No:{" "}
+              <strong>45.2025.3277</strong>
+            </p>
+          </div>
+
           {/* Uyarı */}
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-center">
             <p className="text-sm text-amber-800">
