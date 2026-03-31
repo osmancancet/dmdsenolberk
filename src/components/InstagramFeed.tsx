@@ -1,18 +1,15 @@
-"use client";
-
-import { useEffect } from "react";
 import Image from "next/image";
 
 export default function InstagramFeed() {
-  useEffect(() => {
-    // Elfsight widget script yükle
-    if (!document.querySelector('script[src*="elfsight"]')) {
-      const script = document.createElement("script");
-      script.src = "https://static.elfsight.com/platform/platform.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
+  // Elfsight widget ID aldıktan sonra bu bloğu aktif edin:
+  // useEffect(() => {
+  //   if (!document.querySelector('script[src*="elfsight"]')) {
+  //     const script = document.createElement("script");
+  //     script.src = "https://static.elfsight.com/platform/platform.js";
+  //     script.async = true;
+  //     document.body.appendChild(script);
+  //   }
+  // }, []);
 
   return (
     <section className="py-16 bg-gray-50">
@@ -24,18 +21,8 @@ export default function InstagramFeed() {
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
-        {/* Elfsight Instagram Feed Widget */}
-        {/*
-          Elfsight widget ID'sini almak için:
-          1. https://elfsight.com/instagram-feed-widget/ adresine gidin
-          2. Ücretsiz hesap oluşturun
-          3. Instagram hesabı olarak @dmd.senolberk.45 ekleyin
-          4. Widget oluşturun ve aşağıdaki div'deki class'ı değiştirin
-        */}
-        <div
-          className="elfsight-app-WIDGET_ID_BURAYA"
-          data-elfsight-app-lazy
-        />
+        {/* Elfsight Instagram Feed Widget - ID aldıktan sonra aktif edin */}
+        {/* <div className="elfsight-app-WIDGET_ID" data-elfsight-app-lazy /> */}
 
         {/* Profil ve Takip Et */}
         <div className="mt-10 bg-white rounded-2xl shadow-md p-8 text-center">
