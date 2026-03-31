@@ -4,20 +4,72 @@ import { useRef, useState, useCallback, useEffect } from "react";
 
 type FrameType = "ablasi" | "abisi";
 
+function drawCar(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  s: number,
+  color: string,
+  flip?: boolean
+) {
+  ctx.save();
+  ctx.translate(x, y);
+  if (flip) ctx.scale(-s, s);
+  else ctx.scale(s, s);
+
+  // Gövde alt
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.roundRect(-22, -6, 44, 14, 4);
+  ctx.fill();
+  // Gövde üst (kabin)
+  ctx.beginPath();
+  ctx.roundRect(-13, -18, 26, 14, 3);
+  ctx.fill();
+  // Camlar
+  ctx.fillStyle = "#a8d8ea";
+  ctx.fillRect(-11, -16, 10, 9);
+  ctx.fillRect(1, -16, 10, 9);
+  // Cam çerçeve
+  ctx.strokeStyle = "#555";
+  ctx.lineWidth = 0.8;
+  ctx.strokeRect(-11, -16, 10, 9);
+  ctx.strokeRect(1, -16, 10, 9);
+  // Far
+  ctx.fillStyle = "#FFD54F";
+  ctx.beginPath();
+  ctx.arc(20, -1, 3, 0, Math.PI * 2);
+  ctx.fill();
+  // Arka lamba
+  ctx.fillStyle = "#EF5350";
+  ctx.beginPath();
+  ctx.arc(-20, -1, 2.5, 0, Math.PI * 2);
+  ctx.fill();
+  // Tekerlekler
+  ctx.fillStyle = "#222";
+  ctx.beginPath();
+  ctx.arc(-12, 8, 5.5, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(12, 8, 5.5, 0, Math.PI * 2);
+  ctx.fill();
+  // Jant
+  ctx.fillStyle = "#bbb";
+  ctx.beginPath();
+  ctx.arc(-12, 8, 2.5, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(12, 8, 2.5, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.restore();
+}
+
 export default function ProfileFrameGenerator() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [userImage, setUserImage] = useState<HTMLImageElement | null>(null);
   const [frameType, setFrameType] = useState<FrameType>("ablasi");
-  const [avatarImg, setAvatarImg] = useState<HTMLImageElement | null>(null);
-
-  // Şenol Berk avatar'ını yükle
-  useEffect(() => {
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.onload = () => setAvatarImg(img);
-    img.src = "/images/senolberk.png";
-  }, []);
 
   const drawFrame = useCallback(
     (ctx: CanvasRenderingContext2D, size: number, frameLabel: string) => {
@@ -153,49 +205,11 @@ export default function ProfileFrameGenerator() {
       }
       ctx.restore();
 
-      // Şenol Berk mini fotoğrafları (sol ve sağ)
-      if (avatarImg) {
-        const miniSize = size * 0.12;
-        const miniRadius = miniSize / 2;
-
-        // Sol
-        const leftAngle = Math.PI * 0.85;
-        const leftX = center + Math.cos(leftAngle) * (outerRadius - bandWidth / 2) - miniRadius;
-        const leftY = center + Math.sin(leftAngle) * (outerRadius - bandWidth / 2) - miniRadius;
-
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(leftX + miniRadius, leftY + miniRadius, miniRadius, 0, Math.PI * 2);
-        ctx.clip();
-        ctx.drawImage(avatarImg, leftX, leftY, miniSize, miniSize);
-        ctx.restore();
-
-        ctx.beginPath();
-        ctx.arc(leftX + miniRadius, leftY + miniRadius, miniRadius, 0, Math.PI * 2);
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = "#D4622B";
-        ctx.stroke();
-
-        // Sağ
-        const rightAngle = Math.PI * 0.15;
-        const rightX = center + Math.cos(rightAngle) * (outerRadius - bandWidth / 2) - miniRadius;
-        const rightY = center + Math.sin(rightAngle) * (outerRadius - bandWidth / 2) - miniRadius;
-
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(rightX + miniRadius, rightY + miniRadius, miniRadius, 0, Math.PI * 2);
-        ctx.clip();
-        ctx.drawImage(avatarImg, rightX, rightY, miniSize, miniSize);
-        ctx.restore();
-
-        ctx.beginPath();
-        ctx.arc(rightX + miniRadius, rightY + miniRadius, miniRadius, 0, Math.PI * 2);
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = "#D4622B";
-        ctx.stroke();
-      }
+      // Sol alt araba (kırmızı) ve sağ alt araba (yeşil)
+      drawCar(ctx, center - outerRadius * 0.65, center + outerRadius * 0.68, 2.2, "#C62828");
+      drawCar(ctx, center + outerRadius * 0.65, center + outerRadius * 0.68, 2.2, "#558B2F", true);
     },
-    [userImage, avatarImg]
+    [userImage]
   );
 
   // Canvas'ı her değişiklikte yeniden çiz
