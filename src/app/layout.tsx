@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     "Elevidys",
     "yardım kampanyası",
   ],
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Şenol Berk İçin Bir Hayat Ver",
     description:
