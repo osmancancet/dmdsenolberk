@@ -1,31 +1,17 @@
 import Image from "next/image";
 
 export default function InstagramFeed() {
-  // Elfsight widget ID aldıktan sonra bu bloğu aktif edin:
-  // useEffect(() => {
-  //   if (!document.querySelector('script[src*="elfsight"]')) {
-  //     const script = document.createElement("script");
-  //     script.src = "https://static.elfsight.com/platform/platform.js";
-  //     script.async = true;
-  //     document.body.appendChild(script);
-  //   }
-  // }, []);
-
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Instagram&apos;dan <span className="text-accent">Paylaşımlar</span>
+            Instagram&apos;da <span className="text-accent">Takip Et</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
-        {/* Elfsight Instagram Feed Widget - ID aldıktan sonra aktif edin */}
-        {/* <div className="elfsight-app-WIDGET_ID" data-elfsight-app-lazy /> */}
-
-        {/* Profil ve Takip Et */}
-        <div className="mt-10 bg-white rounded-2xl shadow-md p-8 text-center">
+        <div className="bg-white rounded-2xl shadow-md p-8 text-center">
           <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden p-0.5 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
             <div className="w-full h-full rounded-full overflow-hidden">
               <Image
