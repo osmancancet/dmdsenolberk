@@ -39,7 +39,7 @@ export default function Home() {
               <span className="text-red-400">Bir Hayat Ver</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-xl">
-              10 yaşındaki Şenol Berk, DMD (Duchenne Musküler Distrofi) ile
+              12 yaşındaki Şenol Berk, DMD (Duchenne Musküler Distrofi) ile
               mücadele ediyor. Babasını kaybetmiş, yürüyemiyor ama{" "}
               <strong>umudunu kaybetmedi.</strong>
             </p>
@@ -197,7 +197,7 @@ export default function Home() {
 
               <div className="grid grid-cols-2 gap-4 mt-6">
                 <div className="bg-blue-50 p-4 rounded-xl text-center">
-                  <p className="text-2xl font-bold text-primary">10</p>
+                  <p className="text-2xl font-bold text-primary">12</p>
                   <p className="text-sm text-gray-600">Yaşında</p>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-xl text-center">
