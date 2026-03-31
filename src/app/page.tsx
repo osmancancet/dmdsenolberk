@@ -138,7 +138,7 @@ export default function Home() {
             </p>
             <p className="text-xs text-green-700">
               e-Devlet &rarr; Yardım Toplama İzinleri Sorgulama &rarr;{" "}
-              <strong>Ad Soyad: Serpil Çıvgın</strong> &rarr; Faaliyet No:{" "}
+              <strong>Ad Soyad: Şenol Berk Çıvgın</strong> &rarr; Faaliyet No:{" "}
               <strong>45.2025.3277</strong>
             </p>
           </div>
