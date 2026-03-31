@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#tedavi", label: "Tedavi" },
   { href: "#bagis", label: "Bağış Yap" },
   { href: "#belgeler", label: "Belgeler" },
+  { href: "/destek", label: "Destek Ver" },
   { href: "#iletisim", label: "İletişim" },
 ];
 
