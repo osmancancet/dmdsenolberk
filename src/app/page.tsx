@@ -123,9 +123,9 @@ export default function Home() {
               icon="group"
             />
             <WhatsAppButton
-              href="https://wa.me/905417275725?text=Merhaba%2C%20%C5%9EENOL%20BERK%20%C3%87IVGIN%20i%C3%A7in%20dekont%20iletmek%20istiyorum."
-              label="Dekont İlet (Serpil Çıvgın - Annesi)"
-              subtitle="Bağış dekontu göndermek için tıklayın - 0541 727 57 25"
+              href="https://wa.me/905465718936?text=Merhaba%2C%20%C5%9EENOL%20BERK%20%C3%87IVGIN%20i%C3%A7in%20dekont%20iletmek%20istiyorum."
+              label="Dekont İlet (Serpil Çıvgın)"
+              subtitle="Bağış dekontu göndermek için tıklayın - 0546 571 89 36"
               icon="chat"
             />
           </div>
@@ -138,7 +138,7 @@ export default function Home() {
             </p>
             <p className="text-xs text-green-700">
               e-Devlet &rarr; Yardım Toplama İzinleri Sorgulama &rarr;{" "}
-              <strong>Ad Soyad: Şenol Berk Çıvgın</strong> &rarr; Faaliyet No:{" "}
+              <strong>Ad Soyad: Serpil Çıvgın</strong> &rarr; Faaliyet No:{" "}
               <strong>45.2025.3277</strong>
             </p>
           </div>
@@ -199,6 +199,12 @@ export default function Home() {
                   gidemiyor.
                 </strong>{" "}
                 Tekerlekli sandalyeye bağımlı yaşıyor.
+              </p>
+
+              <p className="text-gray-700 leading-relaxed">
+                Tüm bu zorluklarla mücadele ederken{" "}
+                <strong>babasını da kaybetti.</strong> Küçük yaşta hem ağır bir
+                hastalıkla hem de babasının acısıyla başa çıkmak zorunda kaldı.
               </p>
 
               <p className="text-gray-700 leading-relaxed">
@@ -486,7 +492,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <a
-              href="tel:+905417275725"
+              href="tel:+905465718936"
               className="flex items-center gap-4 bg-gray-50 hover:bg-blue-50 p-6 rounded-2xl border border-gray-100 transition-colors"
             >
               <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl">
@@ -494,7 +500,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="font-semibold">Telefon</p>
-                <p className="text-gray-600">0541 727 57 25</p>
+                <p className="text-gray-600">0546 571 89 36</p>
               </div>
             </a>
 
