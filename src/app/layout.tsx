@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   verification: {
     google: "1_BO8TSn19bpBTJ6zTUxJK9kaEeuWvLm6SrNps3NZeo",
   },
-  title: "Şenol Berk Çivgın - DMD Kas Hastası | Bağış Kampanyası",
+  title: "Şenol Berk Çıvgın - DMD Kas Hastası | Bağış Kampanyası",
   description:
-    "Duchenne Musküler Distrofi (DMD) hastası Şenol Berk Çivgın için gen tedavisi bağış kampanyası. Valilik izinli, Türkiye geneli yardım toplama.",
+    "Duchenne Musküler Distrofi (DMD) hastası Şenol Berk Çıvgın için gen tedavisi bağış kampanyası. Valilik izinli, Türkiye geneli yardım toplama.",
   keywords: [
     "DMD",
     "Duchenne Musküler Distrofi",

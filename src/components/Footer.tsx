@@ -34,7 +34,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-xs text-gray-500">
-          &copy; 2025 Şenol Berk Çivgın Yardım Kampanyası. Tüm hakları
+          &copy; 2025 Şenol Berk Çıvgın Yardım Kampanyası. Tüm hakları
           saklıdır.
         </p>
       </div>

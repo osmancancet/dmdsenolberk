@@ -20,7 +20,7 @@ export default function Home() {
             <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
               <Image
                 src="/images/senolberk.png"
-                alt="Şenol Berk Çivgın"
+                alt="Şenol Berk Çıvgın"
                 fill
                 className="object-cover object-top"
                 priority
@@ -184,7 +184,7 @@ export default function Home() {
               </div>
 
               <p className="text-gray-700 leading-relaxed">
-                <strong>Şenol Berk Çivgın</strong>, 25 Aralık 2014&apos;te
+                <strong>Şenol Berk Çıvgın</strong>, 25 Aralık 2014&apos;te
                 Manisa&apos;da doğdu. Küçük yaşta{" "}
                 <strong>Duchenne Musküler Distrofi (DMD)</strong> teşhisi kondu.
                 DMD, kas dokusunun ilerleyici şekilde zayıfladığı genetik bir

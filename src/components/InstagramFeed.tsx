@@ -25,7 +25,7 @@ export default function InstagramFeed() {
           </div>
           <h3 className="font-bold text-lg mb-1">@dmd.senolberk.45</h3>
           <p className="text-gray-500 text-sm mb-6">
-            DMD Savaşçısı Şenol Berk Çivgın
+            DMD Savaşçısı Şenol Berk Çıvgın
           </p>
           <a
             href="https://www.instagram.com/dmd.senolberk.45/"
